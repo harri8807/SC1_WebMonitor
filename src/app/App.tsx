@@ -11,7 +11,6 @@ export default function App() {
   const [steamBoilerPressure, setSteamBoilerPressure] = useState(0);
   const [flowRate, setFlowRate] = useState(0);
   const [ctrVersion, setCtrVersion] = useState('-');
-  const version = 'v1.0.0';
 
   // Initialize empty data structures with current time
   const initData = () => {
@@ -71,7 +70,6 @@ export default function App() {
         steamBoilerPressure={steamBoilerPressure}
         flowRate={flowRate}
         ctrVersion={ctrVersion}
-        version={version}
       />
 
       {/* 主内容区域 */}

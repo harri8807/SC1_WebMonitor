@@ -8,7 +8,6 @@ interface StatusBarProps {
   steamBoilerPressure: number;
   flowRate: number;
   ctrVersion: string;
-  version: string;
 }
 
 export function StatusBar({
@@ -18,8 +17,7 @@ export function StatusBar({
   extractionBoilerPressure,
   steamBoilerPressure,
   flowRate,
-  ctrVersion,
-  version
+  ctrVersion
 }: StatusBarProps) {
   return (
     <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white p-4 shadow-lg">
@@ -28,7 +26,7 @@ export function StatusBar({
         {/* SC调试平台 标题 */}
         <div className="flex items-center gap-2 bg-slate-600/50 px-4 py-3 rounded-lg border border-slate-500/30 mr-4">
           <Anchor className="w-6 h-6 text-sky-400" />
-          <div className="text-lg font-bold text-sky-100 tracking-wide">咖啡自由SC调试平台</div>
+          <div className="text-lg font-bold text-sky-100 tracking-wide">咖啡自由SC调试平台V1.0.0</div>
         </div>
 
         {/* 温度区域 - 红色系 */}
@@ -91,14 +89,6 @@ export function StatusBar({
           </div>
         </div>
 
-        {/* 版本信息 - 黄色系 */}
-        <div className="flex items-center gap-2 bg-amber-500/20 px-4 py-3 rounded-lg backdrop-blur-sm border border-amber-400/30">
-          <Code className="w-5 h-5 text-amber-400" />
-          <div>
-            <div className="text-xs opacity-80">Web版本</div>
-            <div className="font-mono text-sm text-amber-300">{version}</div>
-          </div>
-        </div>
       </div>
     </div>
   );
